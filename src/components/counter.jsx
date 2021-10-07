@@ -9,7 +9,13 @@ class Counter extends Component {
     fontSize: "10px",
     fontWeight: "bold",
   };
-
+   
+  constructor(){
+    super();
+    thishandleIncrement = this.handleIncrement.bind(this);
+  }
+  // Handle input method is used to bind the method
+// Note: Functions in js are objects so they have properties and methods so here bind is used.
   handleIncrement(){
     console.log('Increment Clicked');
   }
