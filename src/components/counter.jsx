@@ -12,10 +12,11 @@ class Counter extends Component {
    
   constructor(){
     super();
-    thishandleIncrement = this.handleIncrement.bind(this);
+    this.handleIncrement = this.handleIncrement.bind(this);
   }
   // Handle input method is used to bind the method
 // Note: Functions in js are objects so they have properties and methods so here bind is used.
+// Instead of adding reassign function we can add arrow function
   handleIncrement(){
     console.log('Increment Clicked');
   }
