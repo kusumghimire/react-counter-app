@@ -9,34 +9,31 @@ class Counter extends Component {
     fontSize: "10px",
     fontWeight: "bold",
   };
-   
-  constructor(){
-    super();
-    this.handleIncrement = this.handleIncrement.bind(this);
+
+  handleIncrement = () => {
+    this.setState({count: this.state.count +1});
   }
   // Handle input method is used to bind the method
-// Note: Functions in js are objects so they have properties and methods so here bind is used.
-// Instead of adding reassign function we can add arrow function
-  handleIncrement(){
-    console.log('Increment Clicked');
-  }
+  // Note: Functions in js are objects so they have properties and methods so here bind is used.
+  // Instead of adding reassign function we can add arrow function
 
   render() {
-
     return (
       <div>
-        <span className={this.getBadgeClasses()}>
-          {this.formatCount()}
-        </span>
-        <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
-
+        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+        <button
+          onClick={this.handleIncrement}
+          className="btn btn-secondary btn-sm"
+        >
+          Increment
+        </button>
       </div>
     );
   }
 
-  getBadgeClasses(){
+  getBadgeClasses() {
     let classes = "btn m-2 btn-";
-    classes += this.state.count === 0 ? 'warning' : 'primary';
+    classes += this.state.count === 0 ? "warning" : "primary";
     return classes;
   }
 
