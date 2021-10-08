@@ -3,7 +3,7 @@ import Counter from './counter';
 class Counters extends Component{
     state= {
         counters:[
-            {id:1, value:0},   
+            {id:1, value:4},   
             {id:1, value:0},   
             {id:1, value:0},   
             {id:1, value:0},   
@@ -13,7 +13,7 @@ class Counters extends Component{
 
         return(
         <div>
-          {this.state.counters.map(counter => <Counter key={counter.id} value= {counter.value} selected={true} />)
+          {this.state.counters.map(counter => <Counter key={counter.id} value= {counter.value} />)
           }
         </div>);
     }
