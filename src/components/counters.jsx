@@ -10,14 +10,15 @@ class Counters extends Component{
         ]
     }
     render(){
-
         return(
         <div>
           {this.state.counters.map(counter => (
-          <Counter key={counter.id} value= {counter.value} id={counter.id} />
+          <Counter key={counter.id} value= {counter.value} id={counter.id} />  //here value ,id are the parts of the props that can be access to another component
           ))}
         </div>);
     }
 }
 
 export default Counters;
+
+// React Developers Tools 
