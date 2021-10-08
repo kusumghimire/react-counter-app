@@ -17,7 +17,8 @@ class Counter extends Component {
   // Handle input method is used to bind the method
   // Note: Functions in js are objects so they have properties and methods so here bind is used.
   // Instead of adding reassign function we can add arrow function
-  
+  // The component that owns a piece of the state, should be the one modifying it. 
+
   doHandleIncrement =() =>{
     this.handleIncrement({id:1});
   }
@@ -33,7 +34,7 @@ class Counter extends Component {
         >
           Increment
         </button>
-        <button className="btn btn-danger btn-sm m-2">Delete</button>
+        <button onClick={this.props.onDelete} className="btn btn-danger btn-sm m-2">Delete</button>
       </div>
     );
   }

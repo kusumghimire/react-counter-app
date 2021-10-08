@@ -8,12 +8,16 @@ class Counters extends Component{
             {id:1, value:0},   
             {id:1, value:0},   
         ]
-    }
+    };
+
+    handleDelete = () =>{
+       console.log("Event Handler Called");
+    };
     render(){
         return(
         <div>
           {this.state.counters.map(counter => (
-          <Counter key={counter.id} value= {counter.value} id={counter.id} />  //here value ,id are the parts of the props that can be access to another component
+          <Counter key={counter.id} value={counter.value} id={counter.id} onDelete={this.handleDelete}/>  //here value ,id are the parts of the props that can be access to another component
           ))}
         </div>);
     }
