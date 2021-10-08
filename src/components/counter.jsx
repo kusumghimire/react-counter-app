@@ -17,13 +17,17 @@ class Counter extends Component {
   // Handle input method is used to bind the method
   // Note: Functions in js are objects so they have properties and methods so here bind is used.
   // Instead of adding reassign function we can add arrow function
-   
+  
+  doHandleIncrement =() =>{
+    this.handleIncrement({id:1});
+  }
+
   render() {
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          onClick={() => this.handleIncrement (product)}
+          onClick={ this.handleIncrement}
           className="btn btn-secondary btn-sm"
         >
           Increment
