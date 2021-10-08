@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0,
+    value: this.props.value
   };
 
   styles = {
@@ -12,7 +12,7 @@ class Counter extends Component {
 
   handleIncrement = product => {
     console.log(product)
-    this.setState({count: this.state.count +1});
+    this.setState({value: this.state.value +1});
   }
   // Handle input method is used to bind the method
   // Note: Functions in js are objects so they have properties and methods so here bind is used.
@@ -23,6 +23,7 @@ class Counter extends Component {
   }
 
   render() {
+
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
@@ -52,3 +53,4 @@ export default Counter;
 
 
 // Note: react create new virtual DOM
+// Every react have a property called props which includes all the plane attributes
