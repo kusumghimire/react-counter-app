@@ -9,6 +9,14 @@ class Counters extends Component{
             {id:4, value:0},   
         ]
     };
+    
+    handleIncrement = counter =>{
+        const counters = [...this.state.counters];
+        const index = counters.indexOf(counter);
+        counters[index] ={...counter};
+        counters[index].value++;
+        
+    };
 
     handleReset = () =>{
         const counters = this.state.counters.map( c => {
@@ -31,8 +39,8 @@ class Counters extends Component{
           <Counter 
           key={counter.id} 
           onDelete={this.handleDelete}
-          value={counter.value} 
-          id={counter.id} 
+          onIncrement = {this.handleIncrement}
+          counter = {counter} 
           />  //here value ,id are the parts of the props that can be access to another component
           ))}
         </div>);
