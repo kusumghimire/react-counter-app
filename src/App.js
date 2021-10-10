@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import './App.css';
-import Navbar from './components/navbar'
-import Counters from './components/counters';
+import "./App.css";
+import Navbar from "./components/navbar";
+import Counters from "./components/counters";
 
 function App() {
   return (
-     <>
+    <>
       <Navbar />
-     <Counters />
-     </>
+      <main className="container">
+        <Counters />
+      </main>
+    </>
   );
 }
 
