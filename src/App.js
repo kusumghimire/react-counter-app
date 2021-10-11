@@ -21,8 +21,10 @@ class App extends Component {
  }
 
 
-//  This method is called when the dom is referred  and
+//  This method is called after component is rendered into DOM
 // WHhen the component is mounted that means this component is in dom
+// to use lifecycle hook ,,there must be class component
+
  componentDidMount(){
    console.log('app=mount',)
   //  Ajax call
