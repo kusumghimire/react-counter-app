@@ -14,6 +14,22 @@ class App extends Component {
     ],
   };
 
+ constructor (){
+   super();
+   console.log('App - Constructor',this.props);
+  //  this.state 
+ }
+
+
+//  This method is called when the dom is referred  and
+// WHhen the component is mounted that means this component is in dom
+ componentDidMount(){
+   console.log('app=mount',)
+  //  Ajax call
+  // this.setState({movies});
+
+ }
+
   handleIncrement = (counter) => {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
