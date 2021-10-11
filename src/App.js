@@ -29,7 +29,7 @@ class App extends Component {
     });
     this.setState({ counters });
   };
-  handleDelete = (counterId) => {
+  handleDelete = counterId => {
     const counters = this.state.counters.filter((c) => c.id !== counterId);
     this.setState({ counters });
   };
