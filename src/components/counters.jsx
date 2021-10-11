@@ -8,14 +8,14 @@ class Counters extends Component{
             <button className="btn btn-primary btn-sm m-2" onClick={onReset}>
                 Reset
             </button>
-          {counters.map(counter => (
-          <Counter 
-          key={counter.id} 
-          onDelete={onDelete}
-          onIncrement = {onIncrement}
-          counter = {counter} 
-          />  //here value ,id are the parts of the props that can be access to another component
-          ))}
+            {counters.map(counter => (
+            <Counter 
+            key={counter.id} 
+            onDelete={onDelete}
+            onIncrement = {onIncrement}
+            counter = {counter} 
+            />  //here value ,id are the parts of the props that can be access to another component
+            ))}
         </div>);
     }
 }
@@ -23,3 +23,4 @@ class Counters extends Component{
 export default Counters;
 
 // React Developers Tools 
+// Lifecycle hooks : mount, update, unmount
