@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
-// Stateless Functional Component 
+//This is called Stateless Functional Component 
+// We cannot use recycle hooks in the functional component of stateless component
 
 const Navbar = ({totalCounters}) =>{
   return (

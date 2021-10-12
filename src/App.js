@@ -26,7 +26,7 @@ class App extends Component {
 // to use lifecycle hook ,,there must be class component
 
  componentDidMount(){
-   console.log('app=mount',)
+   console.log('app-mounted',)
   //  Ajax call
   // this.setState({movies});
 
