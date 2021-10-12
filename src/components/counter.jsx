@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  componentUpdate (prevProps, prevState){
+  componentDidUpdate (prevProps, prevState){
     console.log("PreProps", prevProps);
     console.log("PreProps", prevState);
     if (prevProps.counter.value !== this.props.counter.value){
       // Ajax call and get new data from the server
     }
 
+  }
+  componentWillUnmount(){
+    console.log('counter-unmounted');
   }
   styles = {
     fontSize: "10px",
