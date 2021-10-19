@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 //This is called Stateless Functional Component 
 // We cannot use recycle hooks in the functional component of stateless component

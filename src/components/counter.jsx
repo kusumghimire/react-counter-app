@@ -2,8 +2,11 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   componentDidUpdate (prevProps, prevState){
-    console.log("PreProps", prevProps);
-    console.log("PreProps", prevState);
+    // this method is called after component is updated
+
+    // console.log("PreProps", prevProps);
+    //   console.log("PreProps", prevState);    
+  
     if (prevProps.counter.value !== this.props.counter.value){
       // Ajax call and get new data from the server
     }
@@ -70,3 +73,6 @@ export default Counter;
 
 // Note: react create new virtual DOM
 // Every react have a property called props which is plain javascripts objects that includes all the plane attributes
+
+// lifecycle hooks are componentWillMount, componentWillUnmount
+// dynamically also means based on a condition

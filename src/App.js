@@ -22,14 +22,13 @@ class App extends Component {
 
 
 //  This method is called after component is rendered into DOM
-// WHhen the component is mounted that means this component is in dom
-// to use lifecycle hook ,,there must be class component
+// When the component is mounted that means this component is in dom
+// to use lifecycle hook ,, there must be class component
 
  componentDidMount(){
    console.log('app-mounted',)
   //  Ajax call
   // this.setState({movies});
-
  }
 
   handleIncrement = (counter) => {
@@ -79,3 +78,4 @@ class App extends Component {
 }
 
 export default App;
+// concetpually counter component is raising an evend called onDecrement and app component is handling this event using handleDecrement ie. the implementation of app is using props to pass funcitonal component
